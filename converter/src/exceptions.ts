@@ -1,3 +1,5 @@
-export interface ReadJsonError extends NodeJS.ErrnoException {
-    message: string;
+export class ReadJsonError extends Error {
+    constructor(readonly message: string) {
+        super();
+    }
 }
