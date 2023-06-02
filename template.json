@@ -1,0 +1,58 @@
+{
+  "name": "state machine name",
+  "clk": "clk",
+  "rst": "rst",
+  "states": [
+    {
+      "name": "StateName",
+      "to": [
+        {
+          "name": "TargetStateName1",
+          "condition": "condition1",
+          "issue": [
+            "mealy_signal1",
+            "mealy_signal2"
+          ]
+        },
+        {
+          "name": "TargetStateName2",
+          "condition": "condition2",
+          "issue": []
+        },
+        {
+          "name": "TargetStateName3",
+          "condition": "condition3 & condition4",
+          "issue": []
+        }
+      ],
+      "issue": [
+        "moore_signal1",
+        "moore_signal2"
+      ]
+    },
+    {
+      "name": "TargetStateName1",
+      "to": [
+        {
+          "name": "TargetStateName3"
+        }
+      ]
+    },
+    {
+      "name": "TargetStateName2",
+      "to": [
+        {
+          "name": "TargetStateName3"
+        }
+      ]
+    },
+    {
+      "name": "TargetStateName3",
+      "to": [
+        {
+          "name": "StateName"
+        }
+      ]
+    }
+  ]
+}
