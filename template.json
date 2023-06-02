@@ -8,7 +8,12 @@
       "to": [
         {
           "name": "TargetStateName1",
-          "condition": "condition1",
+          "condition": {
+            "signals": [
+              "condition1"
+            ],
+            "expression": "condition1"
+          },
           "issue": [
             "mealy_signal1",
             "mealy_signal2"
@@ -16,12 +21,23 @@
         },
         {
           "name": "TargetStateName2",
-          "condition": "condition2",
+          "condition": {
+            "signals": [
+              "condition2"
+            ],
+            "expression": "condition2"
+          },
           "issue": []
         },
         {
           "name": "TargetStateName3",
-          "condition": "condition3 & condition4",
+          "condition": {
+            "signals": [
+              "condition3",
+              "condition4"
+            ],
+            "expression": "condition3 & condition4"
+          },
           "issue": []
         }
       ],
