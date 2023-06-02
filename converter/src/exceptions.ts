@@ -1,3 +1,3 @@
-interface ReadJsonError extends NodeJS.ErrnoException {
+export interface ReadJsonError extends NodeJS.ErrnoException {
     message: string;
 }
