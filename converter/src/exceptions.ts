@@ -1,4 +1,4 @@
-export class ReadJsonError extends Error {
+export class ParseJsonError extends Error {
     constructor(readonly message: string) {
         super();
     }
