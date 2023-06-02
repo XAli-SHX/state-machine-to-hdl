@@ -1,4 +1,4 @@
-interface StateMachine {
+export default interface StateMachine {
     name: string
     clk?: string
     rst?: string
